@@ -12,6 +12,7 @@ html {
 	font-size: 58%;
 	-webkit-text-size-adjust: 100%;
 	transition: all 0.2s ease;
+	font-family: $font__body;
 	@include md-up {
 		font-size: 60%;
 	}
@@ -26,6 +27,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: transparent;
+	font-family: $font__body;
 }
 p { 
 	font-size: 1.6rem;

@@ -22,6 +22,7 @@ html {
   font-size: 58%;
   -webkit-text-size-adjust: 100%;
   transition: all 0.2s ease;
+  font-family: "Montserrat", sans-serif;
 }
 @media screen and (min-width: 768px) {
   html {
@@ -40,6 +41,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: transparent;
+  font-family: "Montserrat", sans-serif;
 }
 
 p {

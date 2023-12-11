@@ -63,14 +63,12 @@
         swiperCarousel: function () {
 
             // Homepage Signup Side Slider
-            let cabinetCarousel = new Swiper ('.cabinet-carousel .swiper', {
+            let cabinetCarousel = new Swiper ('.evolution .swiper', {
                 spaceBetween: 30,
                 slidesPerView: 1,
-                loop: true,
+                loop: !1,
                 speed: 800,
-                autoplay: {
-                    delay: 5000
-                },
+                autoplay: !1,
                 breakpoints: {
                     576: {
                         slidesPerView: 2,
@@ -84,10 +82,58 @@
                     1200: {
                         slidesPerView: 5,
                     },
+                    1400: {
+                        slidesPerView: 8,
+                    },
                 },
                 navigation: {
                     nextEl: ".cabinet-carousel .swiper .swiper-button-next",
                     prevEl: ".cabinet-carousel .swiper .swiper-button-prev",
+                },
+            });
+            // Partner Slider Slider
+            let partnerCarousel = new Swiper ('.our-partners .swiper', {
+                spaceBetween: 30,
+                slidesPerView: 2,
+                loop: 1,
+                speed: 800,
+                autoplay: !1,
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3,
+                    },
+                    992: {
+                        slidesPerView: 4,
+                    },
+                    1200: {
+                        slidesPerView: 5,
+                    },
+                    1400: {
+                        slidesPerView: 7,
+                    },
+                },
+            });
+            // Blog Slider
+            let blogCarousel = new Swiper ('.blog-slider', {
+                spaceBetween: 100,
+                slidesPerView: 2.2,
+                centeredSlides: true,
+                loop: 1,
+                speed: 800,
+                autoplay: !1,
+            });
+            // Social Slider
+            let socialCarousel = new Swiper ('.social-media-slider', {
+                spaceBetween: 0,
+                slidesPerView: 1,
+                centeredSlides: true,
+                loop: 1,
+                speed: 800,
+                autoplay: !1,
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3,
+                    },
                 },
             });
             
