@@ -64,7 +64,7 @@
 
             // Homepage Signup Side Slider
             let cabinetCarousel = new Swiper ('.evolution .swiper', {
-                spaceBetween: 30,
+                spaceBetween: 10,
                 slidesPerView: 1,
                 loop: !1,
                 speed: 800,
@@ -115,7 +115,7 @@
             });
             // Blog Slider
             let blogCarousel = new Swiper ('.blog-slider', {
-                spaceBetween: 100,
+                spaceBetween: 30,
                 slidesPerView: 2.2,
                 centeredSlides: true,
                 loop: 1,
