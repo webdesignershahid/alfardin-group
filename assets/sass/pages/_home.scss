@@ -1,7 +1,7 @@
 .hero_section {
     position: relative;
     z-index: 1;
-    height: 95vh;
+    height: 100vh;
     overflow: hidden;
     video {
         position: absolute;
@@ -9,5 +9,138 @@
         height: 100%;
         object-fit: cover;
         object-position: center bottom;
+        pointer-events: none;
+        user-select: none;
+    }
+
+
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 10rem;
+    //     z-index: 999;
+    //     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 20%, rgba(0,0,0,0) 100%);
+    // }
+}
+
+
+.business_stats {
+    margin: 8rem 0;
+
+    .icon {
+        margin-bottom: .5rem;
+        svg {
+            height: 5rem;
+        }
+    }
+    .number {
+        color: $color__theme;
+        font-weight: 600;
+        font-size: 4rem;
+    }
+    p {
+        font-weight: 500;
+        max-width: 18rem;
+        margin: 0 auto;
+        line-height: 1.35;
+        font-size: 1.5rem;
+    }
+}
+
+.ceo_message {
+    margin: 10rem 0;
+    .row {
+        --bs-gutter-x: 4rem;
+    }
+    .title {
+        font-size: 3.2rem;
+        font-weight: 600;
+        margin-bottom: 3rem;
+    }
+    .text-content {
+        p {
+            font-size: 1.4rem;
+            & + p {
+                margin-top: 2rem;
+            }
+        }
+    }
+    .image-content {
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.mision-vision {
+
+    .item {
+        position: relative;
+        padding: 6rem 1.5rem;
+        z-index: 1;
+        
+        .front {
+            .icon {
+                margin-bottom: 4rem;
+
+                svg {
+                    max-height: 5rem;
+                }
+            }
+            h5 {
+                font-size: 1.6rem;
+                font-weight: 500;
+            }
+        }
+        .back {
+            position: absolute;
+            inset: 0;   
+            opacity: 0;
+            z-index: 2;
+            transition: all .3s;
+            background-color: $color__white;
+            @include flex-center;
+            font-size: 1.5rem;
+            padding: 3rem;
+            text-align: left;
+            transform: scale(.8);
+            border-radius: .5rem;
+            overflow: hidden;
+        }
+        &:hover {
+            .back {
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+.evolution {
+    margin: 10rem 0;
+    .section-title {
+        margin-bottom: 3rem;
+    }
+    .title {
+        font-size: 3.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    .description {
+        max-width: 65rem;
+    }
+
+    .evolution-item {
+        .dot {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background-color: #D9D9D9;
+            margin: 0 auto .7rem;
+        }
     }
 }
