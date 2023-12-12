@@ -4,10 +4,10 @@
     padding-bottom: 56.25%;
     overflow: hidden;
 
-
-    @include sm-up {
-        // height: 45vh;
+    @include xl-up {
+        padding-bottom: 50%;
     }
+
     video {
         position: absolute;
         width: 100%;

@@ -412,6 +412,30 @@ header .brand-logo {
     width: 25rem;
   }
 }
+header .navbar-toggler {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+header .navbar-toggler svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s;
+}
+header .navbar-toggler .close {
+  opacity: 0;
+}
+header .navbar-toggler.menu_active .close {
+  opacity: 1;
+}
+header .navbar-toggler.menu_active .bars {
+  opacity: 0;
+}
 header .start-block ul, header .end-block ul {
   display: flex;
   align-items: center;
@@ -422,8 +446,29 @@ header .start-block ul, header .end-block ul {
     gap: 2rem;
   }
 }
-header .end-block a i {
-  font-size: 2rem;
+@media screen and (max-width: 575px) {
+  header .end-block li:nth-child(2), header .end-block li:nth-child(3) {
+    display: none;
+  }
+}
+header .end-block a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 0.1rem solid #97999B;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+header .end-block a svg {
+  transition: all 0.2s;
+}
+header .end-block a:hover {
+  border-color: #000000;
+}
+header .end-block a:hover svg {
+  fill: #000000;
 }
 
 .header__megamenu {
@@ -550,6 +595,11 @@ footer .footer-bottom {
   z-index: 1;
   padding-bottom: 56.25%;
   overflow: hidden;
+}
+@media screen and (min-width: 1200px) {
+  .hero_section {
+    padding-bottom: 50%;
+  }
 }
 .hero_section video {
   position: absolute;
