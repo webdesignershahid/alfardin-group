@@ -17,6 +17,27 @@
         pointer-events: none;
         user-select: none;
     }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6rem;
+        z-index: 1;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);        
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 6rem;
+        z-index: 1;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(245, 245, 245, 1) 100%);        
+    }
 }
 
 
@@ -83,6 +104,16 @@
         height: 100%;
         background-size: cover;
         background-position: center;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            // background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(245,245,245,1) 100%);
+            background: radial-gradient(circle farthest-side at 50% 50%, rgba(255, 255, 255, 0) 50%, rgba(245, 245, 245, 1) 100%);
+        }
     }
 }
 
@@ -328,12 +359,12 @@
 }
 
 .discover-scholarship {
-    @include md-down {
-        padding: 8rem 0 0;
-    }
     background:  #AFD0E9;
     position: relative;
     z-index: 1;
+    @include md-down {
+        padding: 8rem 0 0;
+    }
     .section-title {
         margin-bottom: 0;
         .title {
@@ -341,6 +372,27 @@
             font-weight: 600;
             line-height: 1.35;
         }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6rem;
+        z-index: 1;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);        
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 8rem;
+        z-index: 1;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(245, 245, 245, 1) 100%);        
     }
 }
 

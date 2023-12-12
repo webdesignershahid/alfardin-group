@@ -8,8 +8,10 @@ header {
     z-index: 999;
     background-color: $color__white;
     transition: all .25s;
-    box-shadow: 0 0 1rem 0 rgba($color__black, .1);
-
+    
+    &.sticky {
+        box-shadow: 0 0 1rem 0 rgba($color__black, .1);
+    }
     .brand-logo {
         width: 16rem;
         @include lg-up {
