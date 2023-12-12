@@ -16,19 +16,19 @@
             function mobile_menu(selector, actionSelector) {
                 var mobile_menu = $(selector);
                 mobile_menu.on("click", function() {
-                    $(selector).toggleClass('sidemenu-open');
+                    $(selector).toggleClass('menu_active');
                 });
                 
                 var hamburgerbtn = $(selector);
                 hamburgerbtn.on("click", function() {
-                    $(actionSelector).toggleClass('sidemenu-open');
+                    $(actionSelector).toggleClass('menu_active');
                 });
 
                 $(document).on('click', function(e) {
                     var selectorType = $(actionSelector).add(mobile_menu);
                     if (selectorType.is(e.target) !== true && selectorType.has(e.target).length === 0) {
-                        $(actionSelector).removeClass("sidemenu-open");
-                        $(selector).removeClass("sidemenu-open");
+                        $(actionSelector).removeClass("menu_active");
+                        $(selector).removeClass("menu_active");
                     }
                 });
                 // $(".menu_wrapper a").on('click', function() {
@@ -36,7 +36,7 @@
                 // });
             
             };
-            mobile_menu('.navbar-toggler, .close-menu', '.mobile-menu');  
+            mobile_menu('.navbar-toggler, .close-menu', '.expand_menu, .header__megamenu');  
         },
         
         /* ============================================================ */
@@ -65,22 +65,25 @@
             // Homepage Signup Side Slider
             let cabinetCarousel = new Swiper ('.evolution .swiper', {
                 spaceBetween: 10,
-                slidesPerView: 1,
+                slidesPerView: 2,
                 loop: !1,
                 speed: 800,
                 autoplay: !1,
                 breakpoints: {
                     576: {
-                        slidesPerView: 2,
-                    },
-                    768: {
                         slidesPerView: 3,
                     },
-                    992: {
+                    768: {
                         slidesPerView: 4,
                     },
-                    1200: {
+                    992: {
                         slidesPerView: 5,
+                    },
+                    1200: {
+                        slidesPerView: 6,
+                    },
+                    1300: {
+                        slidesPerView: 7,
                     },
                     1400: {
                         slidesPerView: 8,
@@ -99,7 +102,7 @@
                 speed: 800,
                 autoplay: !1,
                 breakpoints: {
-                    768: {
+                    576: {
                         slidesPerView: 3,
                     },
                     992: {
@@ -116,11 +119,26 @@
             // Blog Slider
             let blogCarousel = new Swiper ('.blog-slider', {
                 spaceBetween: 30,
-                slidesPerView: 2.2,
+                slidesPerView: 1,
                 centeredSlides: true,
                 loop: 1,
                 speed: 800,
                 autoplay: !1,
+                slideToClickedSlide: 1,
+                breakpoints: {
+                    576: {
+                        slidesPerView: 1.5,
+                    },
+                    768: {
+                        slidesPerView: 1.8,
+                    },
+                    1200: {
+                        slidesPerView: 2,
+                    },
+                    1400: {
+                        slidesPerView: 2.2,
+                    },
+                },
             });
             // Social Slider
             let socialCarousel = new Swiper ('.social-media-slider', {
@@ -131,7 +149,10 @@
                 speed: 800,
                 autoplay: !1,
                 breakpoints: {
-                    768: {
+                    576: {
+                        slidesPerView: 2,
+                    },
+                    992: {
                         slidesPerView: 3,
                     },
                 },
