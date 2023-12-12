@@ -9,7 +9,7 @@
     });
 
 
-    var projectName   = {
+    var alfardanGroup   = {
 
         mobile_expand_menu: function(){
             //=============  Mobile Menu Integration  =============\\
@@ -90,8 +90,8 @@
                     },
                 },
                 navigation: {
-                    nextEl: ".cabinet-carousel .swiper .swiper-button-next",
-                    prevEl: ".cabinet-carousel .swiper .swiper-button-prev",
+                    nextEl: ".evolution .swiper .button-next",
+                    prevEl: ".evolution .swiper .button-prev",
                 },
             });
             // Partner Slider Slider
@@ -100,7 +100,7 @@
                 slidesPerView: 2,
                 loop: 1,
                 speed: 800,
-                autoplay: !1,
+                autoplay: 1,
                 breakpoints: {
                     576: {
                         slidesPerView: 3,
@@ -112,6 +112,7 @@
                         slidesPerView: 5,
                     },
                     1400: {
+                        spaceBetween: 50,
                         slidesPerView: 7,
                     },
                 },
@@ -139,6 +140,10 @@
                         slidesPerView: 2.2,
                     },
                 },
+                navigation: {
+                    nextEl: ".blog-slider .button-next",
+                    prevEl: ".blog-slider .button-prev",
+                },
             });
             // Social Slider
             let socialCarousel = new Swiper ('.social-media-slider', {
@@ -147,7 +152,7 @@
                 centeredSlides: true,
                 loop: 1,
                 speed: 800,
-                autoplay: !1,
+                autoplay: 1,
                 breakpoints: {
                     576: {
                         slidesPerView: 2,
@@ -156,35 +161,6 @@
                         slidesPerView: 3,
                     },
                 },
-            });
-            
-            const lightbox = GLightbox({
-                selector: '.glightbox',
-                touchNavigation: true,
-                loop: true,
-                autoplayVideos: false,
-                plyr: {
-                    // css: 'https://cdn.plyr.io/3.5.6/plyr.css', // Default not required to include
-                    // js: 'https://cdn.plyr.io/3.5.6/plyr.js', // Default not required to include
-                    config: {
-                        ratio: '16:9', // or '4:3'
-                        muted: false,
-                        hideControls: true,
-                        youtube: {
-                            noCookie: true,
-                            rel: 0,
-                            showinfo: 0,
-                            iv_load_policy: 3
-                        },
-                        vimeo: {
-                            byline: false,
-                            portrait: false,
-                            title: false,
-                            speed: true,
-                            transparent: false
-                        }
-                    }
-                }
             });
         },
 
@@ -212,23 +188,16 @@
         },
 
         initialize: function() {0
-			projectName.mobile_expand_menu();
-			projectName.scroll_to_top();
-			projectName.sticky_header();
-			projectName.swiperCarousel();
+			alfardanGroup.mobile_expand_menu();
+			alfardanGroup.scroll_to_top();
+			alfardanGroup.sticky_header();
+			alfardanGroup.swiperCarousel();
 		}
     };
     $(function() {
-		projectName  .initialize();
+		alfardanGroup  .initialize();
 	});
-    ///============= Wow JS =============\\\
-    // wow = new WOW({
-    //     mobile: false,
-    // });
-    // wow.init();
 
-    ///============= Select2 =============\\\
-    // $('.select2').select2();
 
 
 })(jQuery);
