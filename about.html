@@ -237,6 +237,119 @@
 
 
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start About us
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div class="about__us">
+        <div class="container">
+            <div class="tab-content">
+                <div class="tab-pane fade show active corporateProfile_tab"  role="tabpanel">
+                    <h4>
+                        About Us : Corporate Profile
+                    </h4>
+                </div>
+                <div class="tab-pane fade familyMembers_tab" role="tabpanel">
+                    <h4>
+                        About Us : Family Members
+                    </h4>
+                </div>
+                <div class="tab-pane fade boardOfDirectors_tab" role="tabpanel">
+                    <h4>
+                        About Us : Board of Directors
+                    </h4>
+                </div>
+                <div class="tab-pane fade leadershipTeam_tab" role="tabpanel">
+                    <h4>
+                        About us: Leadership Team
+                    </h4>
+                </div>
+                <div class="tab-pane fade historyEvolution_tab" role="tabpanel">
+                    <h4>
+                        HISTORY & EVOLUTION
+                    </h4>
+                </div>
+                <div class="tab-pane fade esgs_csr_tab" role="tabpanel">
+                    <h4>
+                        ESG STRATEGY & CSR
+                    </h4>
+                </div>
+            </div>
+            <ul class="nav nav-tabs main_tab" role="tablist">
+                <li class="nav-item" >
+                    <button class="nav-link active" 
+                        data-bs-toggle="tab"
+                        data-bs-target=".corporateProfile_tab" 
+                        type="button" role="tab">
+                        CORPORATE PROFILE
+                    </button>
+                </li>
+                <li class="nav-item" >
+                    <button class="nav-link" 
+                        data-bs-toggle="tab"
+                        data-bs-target=".familyMembers_tab" 
+                        type="button" role="tab">
+                        FAMILY MEMBERS
+                    </button>
+                </li>
+                <li class="nav-item" >
+                    <button class="nav-link" 
+                        data-bs-toggle="tab"
+                        data-bs-target=".boardOfDirectors_tab" 
+                        type="button" role="tab">
+                        BOARD OF DIRECTORS
+                    </button>
+                </li>
+                <li class="nav-item" >
+                    <button class="nav-link" 
+                        data-bs-toggle="tab"
+                        data-bs-target=".leadershipTeam_tab" 
+                        type="button" role="tab">
+                        LEADERSHIP TEAM
+                    </button>
+                </li>
+                <li class="nav-item" >
+                    <button class="nav-link" 
+                        data-bs-toggle="tab"
+                        data-bs-target=".historyEvolution_tab" 
+                        type="button" role="tab">
+                        HISTORY & EVOLUTION
+                    </button>
+                </li>
+                <li class="nav-item" >
+                    <button class="nav-link" 
+                        data-bs-toggle="tab"
+                        data-bs-target=".esgs_csr_tab" 
+                        type="button" role="tab">
+                        ESG STRATEGY & CSR
+                    </button>
+                </li>
+            </ul>
+            <div class="tab-content" id="secondTab">
+                <div class="tab-pane fade pt-5 mt-5 active show corporateProfile_tab" role="tabpanel">
+                    a
+                </div>
+                <div class="tab-pane fade pt-5 mt-5 familyMembers_tab" role="tabpanel">
+                    b
+                </div>
+                <div class="tab-pane fade pt-5 mt-5 boardOfDirectors_tab" role="tabpanel">
+                    c
+                </div>
+                <div class="tab-pane fade pt-5 mt-5 leadershipTeam_tab" role="tabpanel">
+                    d
+                </div>
+                <div class="tab-pane fade pt-5 mt-5 historyEvolution_tab" role="tabpanel">
+                    e
+                </div>
+                <div class="tab-pane fade pt-5 mt-5 esgs_csr_tab" role="tabpanel">
+                   f
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--~~./ end About us ~~-->
+
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start Footer
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <footer>
@@ -375,6 +488,25 @@
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/glightbox.min.js"></script>
     <script src="assets/js/script.js"></script>
+
+    <script>
+
+document.querySelectorAll('button[data-bs-toggle="tab"]').forEach((t,i)=>{
+    t.addEventListener('show.bs.tab', function (e) {
+        let targetClass = t.dataset.bsTarget
+        var pane = document.querySelector('#secondTab '+targetClass)
+        var sibling = document.querySelector('#secondTab .tab-pane.active')
+        // hide 2nd pane sibling
+        sibling.classList.remove('show')
+        sibling.classList.remove('active')
+        // show 2nd pane
+        pane.classList.add('show')
+        pane.classList.add('active')
+    })  
+})
+
+
+    </script>
 
 </body>
 </html>
