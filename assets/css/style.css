@@ -314,7 +314,7 @@ textarea.form-control:focus {
 .btn-theme {
   display: inline-flex;
   border: 0.1rem solid #C89328;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2.5rem;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: normal;
@@ -329,7 +329,7 @@ textarea.form-control:focus {
 .btn-theme-alt {
   display: inline-flex;
   border: 0.1rem solid #C89328;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2.5rem;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: normal;
@@ -1156,6 +1156,41 @@ footer .footer-bottom {
 --------------------------------------------------------------*/
 .about__us {
   padding: 4rem 0;
+}
+.about__us .tab-content .mission_vision_list {
+  margin: 5rem 0;
+}
+.about__us .tab-content .mission_vision_list .title {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+}
+.about__us .tab-content .mission_vision_list .title svg {
+  max-width: 3rem;
+}
+.about__us .tab-content .mission_vision_list li + li {
+  margin-top: 2rem;
+}
+.about__us .tab-content p + p {
+  margin-top: 2rem;
+}
+.about__us .main_tab {
+  margin: 3rem 0;
+  border-bottom: 0;
+}
+.about__us .main_tab .nav-link {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 0.2rem solid #000000;
+  color: #1F2933;
+  padding: 1.5rem 2rem;
+  font-size: 1.4rem;
+}
+.about__us .main_tab .nav-link.active {
+  color: #FFFFFF;
+  background-color: #C89328;
 }
 
 /*# sourceMappingURL=style.css.map */

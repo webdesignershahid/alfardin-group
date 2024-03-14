@@ -1,3 +1,52 @@
 .about__us {
     padding: 4rem 0;
+
+    .tab-content {
+        .page-title {
+
+        }
+        .mission_vision_list {
+            margin: 5rem 0;
+            .title {
+                margin-bottom: 1rem;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                font-weight: 600;
+                svg {
+                    max-width: 3rem;
+                }
+            }
+            li {
+                & + li {
+                    margin-top: 2rem;
+                }
+            }
+        }
+        p {
+            & + p {
+                margin-top: 2rem;
+            }
+        }
+    }
+    .main_tab {
+        margin: 3rem 0;
+        border-bottom: 0;
+        .nav-link {
+            background-color: transparent;
+            border: 0;
+            border-bottom: .2rem solid $color__black;
+            color: $color__body;
+            padding: 1.5rem 2rem;
+            font-size: 1.4rem;
+
+            &.active {
+                color: $color__white;
+                background-color: $color__theme;
+            }
+        }
+    }
+    .corporateProfile_tab {
+
+    }
 }
