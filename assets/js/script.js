@@ -63,7 +63,7 @@
         swiperCarousel: function () {
 
             // Homepage Signup Side Slider
-            let cabinetCarousel = new Swiper ('.evolution .swiper', {
+            let cabinetCarousel = new Swiper ('.evolutionSlider', {
                 spaceBetween: 10,
                 slidesPerView: 2,
                 loop: !1,

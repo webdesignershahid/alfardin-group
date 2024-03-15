@@ -5,14 +5,36 @@
     .main_tab {
         margin: 3rem 0;
         border-bottom: 0;
+        li {
+            flex: 0 0 50%;
+            @include sm-up {
+                flex: 0 0 33%;
+            }
+            @include md-up {
+                flex: 0 0 25%;
+            }
+            @include lg-up {
+                flex: 0 0 20%;
+            }
+            @include xl-up {
+                flex: 0 0 auto;
+            }
+        }
         .nav-link {
             background-color: transparent;
             border: 0;
             border-bottom: .2rem solid #B6B6B6;
             color: $color__body;
-            padding: 1.5rem 2rem;
-            font-size: 1.4rem;
-
+            padding: 1.2rem 1.5rem;
+            font-size: 1.25rem;
+            width: 100%;
+            @include xl-up {
+                font-size: 1.4rem;
+                padding: 1.5rem 2rem;
+            }
+            @include xxl-up {
+                padding: 1.5rem 2.25rem;
+            }
             &.active {
                 color: $color__white;
                 background-color: $color__theme;
@@ -21,7 +43,7 @@
     }
     .tab-content {
         .page-title {
-
+            font-size: 2rem;
         }
         .mission_vision_list {
             margin: 5rem 0;
@@ -149,6 +171,13 @@
                     }
 
                 }
+            }
+        }
+        .subnav {
+            a {
+                // text-transform: uppercase;
+                padding: 1rem 2rem;
+                display: block;
             }
         }
     }
