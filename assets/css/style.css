@@ -556,6 +556,32 @@ header .end-block a:hover svg {
 /*--------------------------------------------------------------
     [ ## Page Banner]
 --------------------------------------------------------------*/
+.page__banner {
+  height: 50rem;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+.page__banner::before {
+  content: "";
+  position: absolute;
+  top: -0.1rem;
+  left: 0;
+  right: 0;
+  height: 4rem;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgb(245, 245, 245) 85%);
+}
+.page__banner::after {
+  content: "";
+  position: absolute;
+  bottom: -0.1rem;
+  left: 0;
+  right: 0;
+  height: 4rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(245, 245, 245) 85%);
+}
+
 /*--------------------------------------------------------------
     [ ## Footer ]
 --------------------------------------------------------------*/
@@ -1153,7 +1179,7 @@ footer .footer-bottom {
 }
 
 /*--------------------------------------------------------------
-# Home Page
+# About Page
 --------------------------------------------------------------*/
 .about__us {
   padding: 4rem 0;
@@ -1338,6 +1364,72 @@ footer .footer-bottom {
 .about__us .tab-content .subnav a {
   padding: 1rem 2rem;
   display: block;
+}
+
+/*--------------------------------------------------------------
+# Contact Page
+--------------------------------------------------------------*/
+.contactUs {
+  padding: 6rem 0;
+}
+@media screen and (min-width: 992px) {
+  .contactUs {
+    padding: 10rem 0;
+  }
+}
+.contactUs .section-content .row {
+  --bs-gutter-y: 5rem;
+}
+@media screen and (min-width: 1200px) {
+  .contactUs .section-content .row {
+    --bs-gutter-x: 5rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .contactUs .section-content .row {
+    --bs-gutter-x: 8rem;
+  }
+}
+.contactUs .contact-box ul li {
+  margin: 3rem 0;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.contactUs .contact-box ul li .icon {
+  flex: 0 0 3rem;
+}
+.contactUs .contact-box ul li .icon svg {
+  width: 3rem;
+}
+.contactUs .contact-box ul li a {
+  font-size: 1.6rem;
+}
+.contactUs .contact-box .mapbox {
+  margin-top: 2rem;
+}
+@media screen and (min-width: 1200px) {
+  .contactUs .contact-box .mapbox {
+    margin-top: 5rem;
+  }
+}
+.contactUs .cta {
+  background-color: #C89328;
+  color: #FFFFFF;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin-top: 5rem;
+}
+.contactUs .cta a {
+  font-size: 2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.contactUs .cta a i {
+  font-size: 2.4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

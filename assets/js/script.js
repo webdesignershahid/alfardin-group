@@ -90,8 +90,8 @@
                     },
                 },
                 navigation: {
-                    nextEl: ".evolution .swiper .button-next",
-                    prevEl: ".evolution .swiper .button-prev",
+                    nextEl: ".evolutionSlider .button-next",
+                    prevEl: ".evolutionSlider .button-prev",
                 },
             });
             // Partner Slider Slider

@@ -1,0 +1,25 @@
+.page__banner {
+    height: 50rem;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    &::before {
+        content: '';
+        position: absolute;
+        top: -.1rem;
+        left: 0;
+        right: 0;
+        height: 4rem;
+        background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(245,245,245,1) 85%);
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -.1rem;
+        left: 0;
+        right: 0;
+        height: 4rem;
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(245,245,245,1) 85%);
+    }
+}
