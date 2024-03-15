@@ -1157,6 +1157,22 @@ footer .footer-bottom {
 .about__us {
   padding: 4rem 0;
 }
+.about__us .main_tab {
+  margin: 3rem 0;
+  border-bottom: 0;
+}
+.about__us .main_tab .nav-link {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 0.2rem solid #B6B6B6;
+  color: #1F2933;
+  padding: 1.5rem 2rem;
+  font-size: 1.4rem;
+}
+.about__us .main_tab .nav-link.active {
+  color: #FFFFFF;
+  background-color: #C89328;
+}
 .about__us .tab-content .mission_vision_list {
   margin: 5rem 0;
 }
@@ -1173,24 +1189,112 @@ footer .footer-bottom {
 .about__us .tab-content .mission_vision_list li + li {
   margin-top: 2rem;
 }
+.about__us .tab-content p {
+  font-size: 1.4rem;
+}
 .about__us .tab-content p + p {
   margin-top: 2rem;
 }
-.about__us .main_tab {
-  margin: 3rem 0;
-  border-bottom: 0;
+.about__us .tab-content .boardOfDirectors_tab .row {
+  --bs-gutter-x: 2rem;
+  --bs-gutter-y: 3rem;
 }
-.about__us .main_tab .nav-link {
-  background-color: transparent;
-  border: 0;
-  border-bottom: 0.2rem solid #000000;
-  color: #1F2933;
-  padding: 1.5rem 2rem;
-  font-size: 1.4rem;
+@media screen and (min-width: 768px) {
+  .about__us .tab-content .boardOfDirectors_tab .row {
+    --bs-gutter-x: 3rem;
+  }
 }
-.about__us .main_tab .nav-link.active {
-  color: #FFFFFF;
-  background-color: #C89328;
+@media screen and (min-width: 1200px) {
+  .about__us .tab-content .boardOfDirectors_tab .row {
+    --bs-gutter-x: 5rem;
+    --bs-gutter-y: 5rem;
+  }
+}
+.about__us .tab-content .boardOfDirectors_tab .item .thumbnail {
+  position: relative;
+}
+.about__us .tab-content .boardOfDirectors_tab .item .thumbnail::before {
+  content: "";
+  position: absolute;
+  top: -0.1rem;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgb(245, 245, 245) 85%);
+}
+.about__us .tab-content .boardOfDirectors_tab .item .thumbnail::after {
+  content: "";
+  position: absolute;
+  bottom: -0.1rem;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(245, 245, 245) 85%);
+}
+.about__us .tab-content .boardOfDirectors_tab .item img {
+  width: 100%;
+  max-height: 36rem;
+  object-fit: cover;
+  object-position: center;
+}
+.about__us .tab-content .boardOfDirectors_tab .item .desc {
+  padding: 1rem 0;
+}
+.about__us .tab-content .boardOfDirectors_tab .item .desc .name {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.about__us .tab-content .boardOfDirectors_tab .item .desc .origin {
+  font-size: 1.5rem;
+}
+.about__us .tab-content .leadershipTeam_tab .row {
+  --bs-gutter-x: 2rem;
+  --bs-gutter-y: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .about__us .tab-content .leadershipTeam_tab .row {
+    --bs-gutter-x: 3rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__us .tab-content .leadershipTeam_tab .row {
+    --bs-gutter-x: 5rem;
+    --bs-gutter-y: 5rem;
+  }
+}
+.about__us .tab-content .leadershipTeam_tab .item .thumbnail {
+  position: relative;
+}
+.about__us .tab-content .leadershipTeam_tab .item .thumbnail::before {
+  content: "";
+  position: absolute;
+  top: -0.1rem;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgb(245, 245, 245) 85%);
+}
+.about__us .tab-content .leadershipTeam_tab .item .thumbnail::after {
+  content: "";
+  position: absolute;
+  bottom: -0.1rem;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(245, 245, 245) 85%);
+}
+.about__us .tab-content .leadershipTeam_tab .item img {
+  width: 100%;
+  max-height: 36rem;
+  object-fit: cover;
+  object-position: center;
+}
+.about__us .tab-content .leadershipTeam_tab .item .desc {
+  padding: 1rem 0;
+}
+.about__us .tab-content .leadershipTeam_tab .item .desc .name {
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */

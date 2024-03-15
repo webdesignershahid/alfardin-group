@@ -1,6 +1,24 @@
 .about__us {
     padding: 4rem 0;
 
+    
+    .main_tab {
+        margin: 3rem 0;
+        border-bottom: 0;
+        .nav-link {
+            background-color: transparent;
+            border: 0;
+            border-bottom: .2rem solid #B6B6B6;
+            color: $color__body;
+            padding: 1.5rem 2rem;
+            font-size: 1.4rem;
+
+            &.active {
+                color: $color__white;
+                background-color: $color__theme;
+            }
+        }
+    }
     .tab-content {
         .page-title {
 
@@ -24,29 +42,114 @@
             }
         }
         p {
+            font-size: 1.4rem;
             & + p {
                 margin-top: 2rem;
             }
         }
-    }
-    .main_tab {
-        margin: 3rem 0;
-        border-bottom: 0;
-        .nav-link {
-            background-color: transparent;
-            border: 0;
-            border-bottom: .2rem solid $color__black;
-            color: $color__body;
-            padding: 1.5rem 2rem;
-            font-size: 1.4rem;
+        .boardOfDirectors_tab {
+            .row {
+                --bs-gutter-x: 2rem;
+                --bs-gutter-y: 3rem;
+                @include md-up {
+                    --bs-gutter-x: 3rem;
+                }
+                @include xl-up {
+                    --bs-gutter-x: 5rem;
+                    --bs-gutter-y: 5rem;
+                }
+            }
 
-            &.active {
-                color: $color__white;
-                background-color: $color__theme;
+            .item {
+                .thumbnail {
+                    position: relative;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: -.1rem;
+                        left: 0;
+                        right: 0;
+                        height: 5rem;
+                        background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(245,245,245,1) 85%);
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -.1rem;
+                        left: 0;
+                        right: 0;
+                        height: 5rem;
+                        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(245,245,245,1) 85%);
+                    }
+                }
+                img {
+                    width: 100%;
+                    max-height: 36rem;
+                    object-fit: cover;
+                    object-position: center;
+                }
+                .desc {
+                    padding: 1rem 0;
+                    .name {
+                        font-size: 1.8rem;
+                        font-weight: bold;
+                    }
+                    .origin {
+                        font-size: 1.5rem;                        
+                    }
+                }
             }
         }
-    }
-    .corporateProfile_tab {
+        .leadershipTeam_tab {
+            .row {
+                --bs-gutter-x: 2rem;
+                --bs-gutter-y: 3rem;
+                @include md-up {
+                    --bs-gutter-x: 3rem;
+                }
+                @include xl-up {
+                    --bs-gutter-x: 5rem;
+                    --bs-gutter-y: 5rem;
+                }
+            }
 
+            .item {
+                .thumbnail {
+                    position: relative;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: -.1rem;
+                        left: 0;
+                        right: 0;
+                        height: 5rem;
+                        background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(245,245,245,1) 85%);
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -.1rem;
+                        left: 0;
+                        right: 0;
+                        height: 5rem;
+                        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(245,245,245,1) 85%);
+                    }
+                }
+                img {
+                    width: 100%;
+                    max-height: 36rem;
+                    object-fit: cover;
+                    object-position: center;
+                }
+                .desc {
+                    padding: 1rem 0;
+                    .name {
+                        font-size: 1.8rem;
+                        font-weight: bold;
+                    }
+
+                }
+            }
+        }
     }
 }
