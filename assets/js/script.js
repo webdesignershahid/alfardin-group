@@ -97,19 +97,21 @@
             // Partner Slider Slider
             let partnerCarousel = new Swiper ('.our-partners .swiper', {
                 spaceBetween: 30,
-                slidesPerView: 2,
+                slidesPerView: 3,
                 loop: 1,
                 speed: 800,
-                autoplay: 1,
+                autoplay: {
+                    delay: 3000,
+                },
                 breakpoints: {
                     576: {
-                        slidesPerView: 3,
-                    },
-                    992: {
                         slidesPerView: 4,
                     },
-                    1200: {
+                    992: {
                         slidesPerView: 5,
+                    },
+                    1200: {
+                        slidesPerView: 6,
                     },
                     1400: {
                         spaceBetween: 50,

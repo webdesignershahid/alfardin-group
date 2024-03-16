@@ -1,0 +1,45 @@
+.jewellary_single {
+    padding: 10rem 0;
+
+    .nav-tabs.secondary {
+        // border: 0;
+        .nav-link {
+            background-color: transparent;
+            color: $color__black;
+            padding: 1rem 2rem;
+            border: 0;
+            margin: 0;
+            width: 100%;
+            border-radius: 0;
+
+            &.active {
+                color: $color__black;
+                font-weight: bold;
+            }
+        }
+    }
+    .tab-pane {
+        blockquote {
+            margin: 2rem 0 5rem;
+            p {
+                font-size: 2.4rem;
+                
+                @include xl-up {
+                    font-size: 3.4rem;
+                }
+            }
+        }
+        .text-content {
+            p {
+                line-height: 1.6;
+                & + p {
+                    margin-top: 2rem;
+                }
+            }
+        }
+        .image {
+            position: sticky;
+            top: 13rem;
+        }
+    }
+}

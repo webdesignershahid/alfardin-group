@@ -171,6 +171,10 @@ h6 {
   font-weight: 900;
 }
 
+.text-theme {
+  color: #C89328;
+}
+
 /*-------------------------------------------------
     [ ## Fields ]
 ---------------------------------------------------*/
@@ -557,28 +561,35 @@ header .end-block a:hover svg {
     [ ## Page Banner]
 --------------------------------------------------------------*/
 .page__banner {
-  height: 50rem;
+  height: 30rem;
   background-size: cover;
   background-position: center;
   position: relative;
   z-index: 1;
 }
-.page__banner::before {
+@media screen and (min-width: 992px) {
+  .page__banner {
+    height: 40rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page__banner {
+    height: 50rem;
+  }
+}
+.page__banner::before, .page__banner::after {
   content: "";
   position: absolute;
-  top: -0.1rem;
   left: 0;
   right: 0;
   height: 4rem;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgb(245, 245, 245) 85%);
 }
+.page__banner::before {
+  top: -0.1rem;
+}
 .page__banner::after {
-  content: "";
-  position: absolute;
   bottom: -0.1rem;
-  left: 0;
-  right: 0;
-  height: 4rem;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(245, 245, 245) 85%);
 }
 
@@ -1007,6 +1018,12 @@ footer .footer-bottom {
 .our-partners .section-title .description {
   max-width: 65rem;
 }
+.our-partners .partner-item .logo {
+  height: 13rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .our-partners .partner-item img {
   filter: grayscale(100);
   opacity: 0.4;
@@ -1364,6 +1381,88 @@ footer .footer-bottom {
 .about__us .tab-content .subnav a {
   padding: 1rem 2rem;
   display: block;
+}
+
+/*--------------------------------------------------------------
+# Jewellery Page
+--------------------------------------------------------------*/
+.jewellary_single {
+  padding: 10rem 0;
+}
+.jewellary_single .nav-tabs.secondary .nav-link {
+  background-color: transparent;
+  color: #000000;
+  padding: 1rem 2rem;
+  border: 0;
+  margin: 0;
+  width: 100%;
+  border-radius: 0;
+}
+.jewellary_single .nav-tabs.secondary .nav-link.active {
+  color: #000000;
+  font-weight: bold;
+}
+.jewellary_single .tab-pane blockquote {
+  margin: 2rem 0 5rem;
+}
+.jewellary_single .tab-pane blockquote p {
+  font-size: 2.4rem;
+}
+@media screen and (min-width: 1200px) {
+  .jewellary_single .tab-pane blockquote p {
+    font-size: 3.4rem;
+  }
+}
+.jewellary_single .tab-pane .text-content p {
+  line-height: 1.6;
+}
+.jewellary_single .tab-pane .text-content p + p {
+  margin-top: 2rem;
+}
+.jewellary_single .tab-pane .image {
+  position: sticky;
+  top: 13rem;
+}
+
+/*--------------------------------------------------------------
+# Automotive Page
+--------------------------------------------------------------*/
+.automotive_single {
+  padding: 10rem 0;
+}
+.automotive_single .nav-tabs.secondary .nav-link {
+  background-color: transparent;
+  color: #000000;
+  padding: 1rem 2rem;
+  border: 0;
+  margin: 0;
+  width: 100%;
+  border-radius: 0;
+}
+.automotive_single .nav-tabs.secondary .nav-link.active {
+  color: #000000;
+  font-weight: bold;
+}
+.automotive_single .section-content blockquote {
+  margin: 2rem 0 5rem;
+}
+.automotive_single .section-content blockquote p {
+  font-size: 2.4rem;
+}
+@media screen and (min-width: 1200px) {
+  .automotive_single .section-content blockquote p {
+    font-size: 3.4rem;
+  }
+}
+.automotive_single .section-content .text-content p {
+  line-height: 1.6;
+}
+.automotive_single .section-content .text-content p + p {
+  margin-top: 2rem;
+}
+.automotive_single .section-content .image {
+  position: sticky;
+  top: 13rem;
 }
 
 /*--------------------------------------------------------------
