@@ -17,9 +17,6 @@ header {
         @include lg-up {
             width: 20rem;
         }
-        @include xxl-up {
-            width: 25rem;
-        }
     }
     .navbar-toggler {
         width: 2rem;
@@ -97,7 +94,7 @@ header {
         padding: 5rem 0;
     }
     @include xxl-up {
-        top: 11.6rem;
+        top: 9.6rem;
     }
     .widget-wrapper {
         @include md-down {

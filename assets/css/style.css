@@ -51,7 +51,7 @@ body {
 }
 @media screen and (min-width: 1400px) {
   body {
-    padding-top: 11.6rem;
+    padding-top: 9.6rem;
   }
 }
 
@@ -351,6 +351,32 @@ textarea.form-control:focus {
   margin: 0;
 }
 
+.pagination_wrapper {
+  margin-top: 5rem;
+}
+.pagination_wrapper .pagination {
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.pagination_wrapper .pagination .page-link {
+  background-color: #E9E9E9;
+  width: 5rem;
+  height: 5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  border: 0;
+  box-shadow: none;
+  display: grid;
+  place-content: center;
+  color: #8F8F8F;
+  transition: all 0.15s ease;
+}
+.pagination_wrapper .pagination .page-link.active, .pagination_wrapper .pagination .page-link:hover {
+  background-color: #828282;
+  color: #FFFFFF;
+}
+
 .preloader {
   position: fixed;
   inset: 0;
@@ -426,11 +452,6 @@ header .brand-logo {
 @media screen and (min-width: 992px) {
   header .brand-logo {
     width: 20rem;
-  }
-}
-@media screen and (min-width: 1400px) {
-  header .brand-logo {
-    width: 25rem;
   }
 }
 header .navbar-toggler {
@@ -512,7 +533,7 @@ header .end-block a:hover svg {
 }
 @media screen and (min-width: 1400px) {
   .header__megamenu {
-    top: 11.6rem;
+    top: 9.6rem;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1471,6 +1492,80 @@ footer .footer-bottom {
 .automotive_single .section-content .image {
   position: sticky;
   top: 13rem;
+}
+
+/*--------------------------------------------------------------
+# News Page
+--------------------------------------------------------------*/
+.news {
+  padding: 4rem 0 10rem;
+}
+.news .row {
+  --bs-gutter-x: 3rem;
+  --bs-gutter-y: 3rem;
+}
+@media screen and (min-width: 1200px) {
+  .news .row {
+    --bs-gutter-y: 5rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .news .row {
+    --bs-gutter-y: 8rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .news .news-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .news .news-item .thumbnail {
+    flex: 0 0 23rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .news .news-item .thumbnail {
+    flex: 0 0 28rem;
+  }
+}
+.news .news-item .thumbnail img {
+  width: 100%;
+}
+.news .news-item .description {
+  flex: 1;
+}
+@media screen and (max-width: 1199px) {
+  .news .news-item .description {
+    padding: 1rem 0 0 0;
+  }
+}
+.news .news-item p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.news .news-item .btn-theme {
+  padding: 0.7rem 2rem;
+  font-size: 1.3rem;
+}
+.news .news-item .post-title {
+  line-height: 1.5;
+  font-size: 1.6rem;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+.news .news-item .post-title:hover {
+  color: #C89328;
 }
 
 /*--------------------------------------------------------------
