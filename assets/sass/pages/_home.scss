@@ -180,17 +180,17 @@
         padding: 3rem 0 2rem;
     }
 
-    &::after {
-        content: '';
+    .overlay_img {
         position: absolute;
         top: 0;
         right: 0;
         height: 100%;
         width: 100%;
-        background: url(../img/bg1.png) no-repeat top right;
         z-index: -1;
         opacity: .12;
         background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     
@@ -450,9 +450,9 @@
 }
 
 .blogs {
-    padding: 10rem 0;
+    margin: 10rem 0;
     @include lg-down {
-        padding: 6rem 0;
+        margin: 6rem 0;
     }
     .section-title {
         margin-bottom: 3rem;

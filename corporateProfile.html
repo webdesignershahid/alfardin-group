@@ -491,25 +491,5 @@
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/glightbox.min.js"></script>
     <script src="assets/js/script.js"></script>
-
-    <script>
-
-document.querySelectorAll('button[data-bs-toggle="tab"]').forEach((t,i)=>{
-    t.addEventListener('show.bs.tab', function (e) {
-        let targetClass = t.dataset.bsTarget
-        var pane = document.querySelector('#secondTab '+targetClass)
-        var sibling = document.querySelector('#secondTab .tab-pane.active')
-        // hide 2nd pane sibling
-        sibling.classList.remove('show')
-        sibling.classList.remove('active')
-        // show 2nd pane
-        pane.classList.add('show')
-        pane.classList.add('active')
-    })  
-})
-
-
-    </script>
-
 </body>
 </html>

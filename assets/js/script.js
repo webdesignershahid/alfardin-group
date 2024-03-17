@@ -164,6 +164,26 @@
                     },
                 },
             });
+            // Heighlight Slider
+            let heighlightCarousel = new Swiper ('.heighlightSlider', {
+                spaceBetween: 15,
+                slidesPerView: 2,
+                loop: 1,
+                speed: 800,
+                autoplay: {
+                    delay: 3000,
+                },
+                breakpoints: {
+                    576: {
+                        slidesPerView: 3,
+                        spaceBetween: 25,
+                    },
+                    992: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    },
+                },
+            });
         },
 
         /* ============================================================ */

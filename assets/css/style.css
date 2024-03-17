@@ -36,11 +36,11 @@ html {
 }
 
 body {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #F5F5F5;
+  background-color: #FBFBFA;
   font-family: "Montserrat", sans-serif;
   padding-top: 9rem;
 }
@@ -56,7 +56,7 @@ body {
 }
 
 p {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.75;
   margin: 0;
 }
@@ -847,17 +847,17 @@ footer .footer-bottom {
     padding: 3rem 0 2rem;
   }
 }
-.evolution::after {
-  content: "";
+.evolution .overlay_img {
   position: absolute;
   top: 0;
   right: 0;
   height: 100%;
   width: 100%;
-  background: url(../img/bg1.png) no-repeat top right;
   z-index: -1;
   opacity: 0.12;
   background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .evolutionSlider {
@@ -1095,11 +1095,11 @@ footer .footer-bottom {
 }
 
 .blogs {
-  padding: 10rem 0;
+  margin: 10rem 0;
 }
 @media screen and (max-width: 991px) {
   .blogs {
-    padding: 6rem 0;
+    margin: 6rem 0;
   }
 }
 .blogs .section-title {
@@ -1222,7 +1222,9 @@ footer .footer-bottom {
 .about__us {
   padding: 4rem 0;
 }
-.about__us .main_menu, .about__us .nav-tabs {
+.about__us .main_menu,
+.about__us .nav-tabs {
+  background-color: #f5f5f5;
   margin: 3rem 0;
   border-bottom: 0;
   display: flex;
@@ -1230,10 +1232,11 @@ footer .footer-bottom {
   flex-wrap: wrap;
   align-items: end;
 }
-.about__us .main_menu .nav-link, .about__us .nav-tabs .nav-link {
+.about__us .main_menu .nav-link,
+.about__us .nav-tabs .nav-link {
   background-color: transparent;
   border: 0;
-  border-bottom: 0.2rem solid #B6B6B6;
+  border-bottom: 0.2rem solid #b6b6b6;
   color: #1F2933;
   padding: 1.2rem 1.5rem;
   font-size: 1.25rem;
@@ -1242,11 +1245,13 @@ footer .footer-bottom {
   white-space: nowrap;
 }
 @media screen and (min-width: 1200px) {
-  .about__us .main_menu .nav-link, .about__us .nav-tabs .nav-link {
+  .about__us .main_menu .nav-link,
+  .about__us .nav-tabs .nav-link {
     font-size: 1.4rem;
   }
 }
-.about__us .main_menu .nav-link.active, .about__us .nav-tabs .nav-link.active {
+.about__us .main_menu .nav-link.active,
+.about__us .nav-tabs .nav-link.active {
   color: #000000;
   font-weight: bold;
   border-color: #C89328;
@@ -1354,7 +1359,7 @@ footer .footer-bottom {
   border-left: 0.2rem solid;
   border-right: 0.2rem solid;
   border-top: 0.2rem solid;
-  border-color: #C0C0C0;
+  border-color: #c0c0c0;
   border-radius: 0.5rem 0.5rem 0 0;
 }
 .about__us .leadershipteam .border-blr {
@@ -1362,7 +1367,7 @@ footer .footer-bottom {
   border-left: 0.2rem solid;
   border-right: 0.2rem solid;
   border-bottom: 0.2rem solid;
-  border-color: #C0C0C0;
+  border-color: #c0c0c0;
   border-radius: 0 0 0.5rem 0.5rem;
 }
 .about__us .leadership_item .item-title {
@@ -1407,9 +1412,198 @@ footer .footer-bottom {
   line-height: 1.5;
 }
 
-.esg-stragety .nav-tabs {
-  position: sticky;
-  top: 12rem;
+.esg_strategy_mision {
+  margin: 10rem 0;
+}
+@media screen and (max-width: 991px) {
+  .esg_strategy_mision {
+    margin: 6rem 0;
+  }
+}
+.esg_strategy_mision .mision_vision {
+  background-color: #f6f5f4;
+  padding: 4rem;
+}
+.esg_strategy_mision .end-item {
+  max-width: 25rem;
+  margin: 0 auto;
+}
+.esg_strategy_mision .end-item img {
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.35);
+}
+.esg_strategy_mision .end-item p {
+  margin: 2rem 0;
+}
+.esg_strategy_mision .end-item p a {
+  display: block;
+}
+.esg_strategy_mision .item {
+  position: relative;
+  padding: 6rem 1.5rem;
+  z-index: 1;
+}
+.esg_strategy_mision .item .front .icon {
+  margin-bottom: 2rem;
+}
+.esg_strategy_mision .item .front .icon svg {
+  max-height: 4rem;
+}
+.esg_strategy_mision .item .front h5 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.esg_strategy_mision .item .back {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  z-index: 2;
+  transition: all 0.3s;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 3rem;
+  text-align: left;
+  transform: scale(0.8);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+@media screen and (max-width: 991px) {
+  .esg_strategy_mision .item .back {
+    padding: 2rem;
+  }
+}
+.esg_strategy_mision .item:hover .back {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.commitments .item.ungc .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.commitments .item + .item {
+  margin-top: 5rem;
+}
+.commitments .item.sdg .end-item {
+  max-width: 25rem;
+  margin: 0 auto;
+}
+.commitments .item.sdg .end-item img {
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.35);
+}
+.commitments .item.sdg .end-item p {
+  margin: 2rem 0;
+}
+.commitments .item.sdg .end-item p a {
+  display: block;
+}
+.commitments .item.sdg .sdg_items {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media screen and (min-width: 576px) {
+  .commitments .item.sdg .sdg_items {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 768px) {
+  .commitments .item.sdg .sdg_items {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+.commitments .item.sdg .sdg_items img {
+  width: 100%;
+}
+
+.sustainability_committee {
+  margin: 10rem 0;
+}
+@media screen and (max-width: 991px) {
+  .sustainability_committee {
+    margin: 6rem 0;
+  }
+}
+.sustainability_committee .committee_item_wrapper {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media screen and (min-width: 576px) {
+  .sustainability_committee .committee_item_wrapper {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 768px) {
+  .sustainability_committee .committee_item_wrapper {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 992px) {
+  .sustainability_committee .committee_item_wrapper {
+    gap: 3rem;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .sustainability_committee .committee_item_wrapper {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+.sustainability_committee .committee_item .item-title {
+  font-size: 1.8rem;
+}
+.sustainability_committee .committee_item .thumbnail {
+  position: relative;
+}
+.sustainability_committee .committee_item .thumbnail::before {
+  content: "";
+  position: absolute;
+  top: -0.1rem;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgb(245, 245, 245) 85%);
+}
+.sustainability_committee .committee_item .thumbnail::after {
+  content: "";
+  position: absolute;
+  bottom: -0.1rem;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(245, 245, 245) 85%);
+}
+.sustainability_committee .committee_item img {
+  width: 100%;
+  max-height: 36rem;
+  object-fit: cover;
+  object-position: center;
+}
+.sustainability_committee .committee_item .desc {
+  padding: 1rem 0;
+}
+.sustainability_committee .committee_item .desc .name {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.sustainability_committee .committee_item .desc .designation {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.heighlights {
+  margin: 10rem 0;
+}
+@media screen and (max-width: 991px) {
+  .heighlights {
+    margin: 6rem 0;
+  }
 }
 
 /*--------------------------------------------------------------
