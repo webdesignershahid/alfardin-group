@@ -94,6 +94,31 @@
                     prevEl: ".evolutionSlider .button-prev",
                 },
             });
+            // ESG Our Journey Slider
+            let esgJourneySlider = new Swiper ('.ourJourneySlider', {
+                spaceBetween: 10,
+                slidesPerView: 2.5,
+                loop: !1,
+                speed: 800,
+                autoplay: !1,
+                centeredSlides: true,                
+                slideToClickedSlide: 1,
+                breakpoints: {
+                    768: {
+                        slidesPerView: 4,
+                    },
+                    992: {
+                        slidesPerView: 5,
+                    },
+                    1200: {
+                        slidesPerView: 7,
+                    },
+                },
+                navigation: {
+                    nextEl: ".ourJourneySlider .button-next",
+                    prevEl: ".ourJourneySlider .button-prev",
+                },
+            });
             // Partner Slider Slider
             let partnerCarousel = new Swiper ('.our-partners .swiper', {
                 spaceBetween: 30,

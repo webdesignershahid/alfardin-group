@@ -4,6 +4,9 @@
         font-size: 3.2rem;
         font-weight: 600;
         margin-bottom: 1rem;
+        @include lg-down {
+            font-size: 2.6rem;
+        }
     }
     .description {
         max-width: 65rem;

@@ -1,10 +1,16 @@
 .about__us {
     padding: 4rem 0;
+    .page_title {
+        margin-bottom: 2rem;
+        font-size: 2rem;
 
+        @include xl-up {
+            font-size: 2.4rem;
+        }
+    }
     .main_menu,
     .nav-tabs {
         background-color: #f5f5f5;
-        margin: 3rem 0;
         border-bottom: 0;
         display: flex;
         justify-content: start;
@@ -37,18 +43,21 @@
     }
 
     .tab-content {
+
+        .text-content {
+            p {
+                & + p {
+                    margin-top: 1rem;
+                }
+            }
+        }
         .image-content {
-            height: 75%;
             @include xxl-up {
                 padding-left: 5rem;
             }
-            img {
-                min-height: 100%;
-                object-fit: cover;
-            }
         }
 
-        .boardOfDirectors_tab {
+        .boardOfDirectors_tab, .familyMember {
             .row {
                 --bs-gutter-x: 2rem;
                 --bs-gutter-y: 3rem;
@@ -59,9 +68,18 @@
                     --bs-gutter-x: 5rem;
                     --bs-gutter-y: 5rem;
                 }
+                @include xxl-up {
+                    --bs-gutter-x: 10rem;
+                }
             }
 
             .item {
+                .item-title {
+                    font-size: 1.6rem;
+                    @include lg-up {
+                        font-size: 2rem;
+                    }
+                }
                 .thumbnail {
                     position: relative;
                     &::before {
@@ -93,15 +111,18 @@
                 }
                 img {
                     width: 100%;
-                    max-height: 36rem;
+                    max-height: 45rem;
                     object-fit: cover;
                     object-position: center;
                 }
                 .desc {
                     padding: 1rem 0;
                     .name {
-                        font-size: 1.8rem;
+                        font-size: 1.6rem;
                         font-weight: bold;
+                        @include lg-up {
+                            font-size: 1.8rem;
+                        }
                     }
                     .designation {
                         line-height: 1.5;
@@ -140,6 +161,9 @@
             @include xl-up {
                 --bs-gutter-x: 5rem;
                 --bs-gutter-y: 5rem;
+            }
+            @include xxl-up {
+                --bs-gutter-x: 10rem;
             }
         }
         .border-tlr {
@@ -194,7 +218,7 @@
         }
         img {
             width: 100%;
-            max-height: 36rem;
+            max-height: 45rem;
             object-fit: cover;
             object-position: center;
         }
@@ -211,7 +235,130 @@
         }
     }
 }
+.our_approach {
+    .text-content {
+        p {
+            & + p {
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}
+.our_journey {
+    margin: 5rem 0;
 
+    .swiper-wrapper {
+        padding: 10rem 0 2rem;
+    }
+    .swiper {
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 17.75rem;
+            width: 100%;
+            height: 0;
+            border-top: .4rem solid #C7C9C7;
+        }
+    }
+    .nav_btn {
+        position: absolute;
+        top: 15.75rem;
+        z-index: 99;
+
+        svg {
+            transition: all .2s ease;
+            @include xl-down {
+                width: 2rem;
+                height: 4.5rem;
+            }
+        }
+
+        &.swiper-button-disabled {
+            pointer-events: none;
+            svg {
+                opacity: 0;
+                visibility: hidden;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                width: .4rem;
+                height: 100%;
+                background-color: #d9d9d9;
+                transition: all .2s ease;
+            }
+        }
+    }
+    .button-prev {
+        left: 0;
+        &.swiper-button-disabled {
+            &::before {
+                left: 0;
+            }
+        }
+    }
+    .button-next {
+        right: 0;
+
+        &.swiper-button-disabled {
+            &::before {
+                right: 0;
+            }
+        }
+    }
+    
+    .journey_item {
+        transition: all .3s ease;
+        .dot {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background-color: #C7C9C7;
+            margin: 2.5rem auto;
+            transition: all .3s ease;
+        }
+        .content {
+            text-align: center;
+            width: 10rem;
+            height: 10rem;
+            margin: 0 auto;
+            border: .5rem solid transparent;
+            border-radius: 50%;
+            display: grid;
+            place-content: center;
+            transition: all .25s ease;
+            transform: translateY(-2rem);
+        }
+        .month, .year {
+            color: $color__theme;
+            font-weight: bold;
+            font-size: 1.7rem;
+        }
+        .description {
+            font-weight: 600;
+            max-width: 15rem;
+            margin: 0 auto;
+            text-align: center;
+            opacity: 0;
+            transition: all .3s ease ;
+        }
+    }
+    .swiper-slide-active {
+        .journey_item {
+            transform: translateY(-8.8rem);
+            .description {
+                opacity: 1;
+            }
+            .content {
+                border-color: #C7C9C7;               
+                background-color: #fff;
+                transform: translateY(0);
+            }
+
+        }
+    }
+}
 .esg_strategy_mision {
     margin: 10rem 0;
     @include lg-down {
@@ -284,8 +431,18 @@
             .links {
                 display: flex;
                 flex-wrap: wrap;
-                gap: 2rem;
+                gap: 1rem;
                 margin-top: 3rem;
+                @include lg-up {
+                    gap: 2rem;
+                }
+
+                .btn-theme {
+                    @include md-down {
+                        font-size: 1.3rem;
+                        padding: 1rem;
+                    }
+                }
             }
         }
         & + .item {
