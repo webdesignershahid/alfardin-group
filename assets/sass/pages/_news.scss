@@ -11,6 +11,35 @@
             --bs-gutter-y: 8rem;
         }
     }
+
+    .search_form {
+        background-color: #F6F6F6;
+        padding: 2rem;
+        margin-bottom: 5rem;
+        form {
+            max-width: 80rem;
+            margin: 0 auto;
+        }
+        .form-control {
+            padding: 1.5rem 2rem;
+            border: .1rem solid $color__theme;
+        }
+        button {
+            padding: 1rem 1rem;
+            background-color: $color__theme;
+            color: $color__white;
+            border: .1rem solid $color__theme;
+            font-size: 1.6rem;
+            font-weight: 500;
+            outline: .1rem solid $color__theme;
+            margin-left: 0 !important;
+            
+            @include sm-up {
+                padding: 1rem 3rem;
+            }
+        }
+
+    }
     .news-item {
         @include xl-up {
             display: flex;

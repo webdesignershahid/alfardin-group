@@ -1350,6 +1350,9 @@ footer .footer-bottom {
 .about__us .tab-content .boardOfDirectors_tab .item .desc .designation, .about__us .tab-content .familyMember .item .desc .designation {
   line-height: 1.5;
 }
+.about__us .corporate_profile {
+  padding: 8rem 0;
+}
 .about__us .corporate_profile .mission_vision_list {
   margin: 5rem 0;
 }
@@ -1365,6 +1368,9 @@ footer .footer-bottom {
 }
 .about__us .corporate_profile .mission_vision_list li + li {
   margin-top: 2rem;
+}
+.about__us .leadershipteam {
+  padding: 8rem 0;
 }
 .about__us .leadershipteam .row {
   --bs-gutter-x: 2rem;
@@ -1857,6 +1863,34 @@ footer .footer-bottom {
 @media screen and (min-width: 1400px) {
   .news .row {
     --bs-gutter-y: 8rem;
+  }
+}
+.news .search_form {
+  background-color: #F6F6F6;
+  padding: 2rem;
+  margin-bottom: 5rem;
+}
+.news .search_form form {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+.news .search_form .form-control {
+  padding: 1.5rem 2rem;
+  border: 0.1rem solid #C89328;
+}
+.news .search_form button {
+  padding: 1rem 1rem;
+  background-color: #C89328;
+  color: #FFFFFF;
+  border: 0.1rem solid #C89328;
+  font-size: 1.6rem;
+  font-weight: 500;
+  outline: 0.1rem solid #C89328;
+  margin-left: 0 !important;
+}
+@media screen and (min-width: 576px) {
+  .news .search_form button {
+    padding: 1rem 3rem;
   }
 }
 @media screen and (min-width: 1200px) {
